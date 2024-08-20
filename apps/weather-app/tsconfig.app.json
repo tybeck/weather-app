@@ -2,7 +2,19 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@penn/schemas": ["src/app/schemas/index"],
+      "@penn/hooks": ["src/app/hooks/index"],
+      "@penn/utils": ["src/app/utils/index"],
+      "@penn/layout": ["src/app/components/layout/index"],
+      "@penn/screens": ["src/app/screens/index"],
+      "@penn/context": ["src/app/context/index"],
+      "@penn/theme": ["src/app/theme/index"],
+      "@penn/types": ["src/app/types/index"],
+      "@penn-ui/common": ["src/app/components/common/index"]
+    }
   },
   "files": ["../../node_modules/@nx/expo/typings/svg.d.ts"],
   "exclude": [
